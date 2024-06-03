@@ -46,6 +46,7 @@ body {
 
 header {
     background: #333;
+    background-image: url('images/classes-bg.png');
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -93,6 +94,9 @@ main {
     justify-content: space-between;
     align-items: center;
     background: #222;
+    background-image: url('images/classes-bg.png');
+    background-size: cover; /* Adjust the background size as needed */
+    background-position: center; /* Adjust the background position as needed */
     padding: 50px 20px;
 }
 
@@ -245,6 +249,7 @@ main {
 #video-section {
     text-align: center;
     background: #333;
+    background-image: url('images/classes-bg.png');
     padding: 50px 20px;
     color: #fff;
 }
@@ -458,26 +463,136 @@ main {
 
 
 footer {
-    background: #333;
+    background: #1c1e21;
+    background-image: url('images/classes-bg.png');
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 40px 0;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.footer-content p {
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-hours p {
+    margin: 5px 0;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section .icon {
+    width: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.newsletter form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: #e04343;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+}
+
+.footer-bottom {
+    background: #18191c;
+    background-image: url('images/classes-bg.png');
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
     margin: 0;
 }
 
-.footer-content nav a {
-    color: #fff;
-    margin: 0 10px;
+.footer-bottom a {
+    color: #ff4d4d;
     text-decoration: none;
 }
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom-links {
+    margin-top: 10px;
+}
+
+.footer-bottom-links a {
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom-links a:hover {
+    color: #fff;
+}
+
 
 
