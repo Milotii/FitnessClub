@@ -75,6 +75,13 @@ header .join-now {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+header .join-now:hover {
+    background: #ff1a1a; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 main {
@@ -95,9 +102,13 @@ main {
 
 .hero-text .badge {
     background: #ff4d4d;
-    padding: 5px 10px;
+    color: #fff;
+    padding: 15px 20px;
     display: inline-block;
     margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
 }
 
 .hero-text h1 {
@@ -113,10 +124,17 @@ main {
 .hero-text .get-started {
     background: #ff4d4d;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+.hero-text .get-started:hover {
+    background: #ff1a1a; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 .hero-image {
@@ -128,27 +146,88 @@ main {
     height: auto;
 }
 
+/* Stats Container */
 .stats {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    position: relative;
+    height: 150px; /* Adjust height as needed */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between stat elements */
 }
 
+/* Individual Stat */
 .stat {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
+    position: relative;
+    width: 120px; /* Adjust width as needed */
+    padding: 20px;
     color: #fff;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: move 10s infinite alternate ease-in-out;
 }
 
+/* Specific positioning for each stat */
+.heart-rate-stat {
+    animation-name: move-heart-rate;
+}
+
+.calories-burned-stat {
+    animation-name: move-calories-burned;
+}
+
+/* Symbols */
+.stat .symbol {
+    width: 250px; /* Increased size */
+    height: 250px; /* Increased size */
+    margin-bottom: 10px;
+}
+
+/* Hide Text */
+.stat .heart-rate,
+.stat .calories-burned,
 .stat .value {
-    font-size: 18px;
-    font-weight: 700;
-    color: #ff4d4d;
+    display: none;
+}
+
+/* Heart Rate Animation */
+@keyframes move-heart-rate {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        transform: translate(10px, 10px);
+    }
+    100% {
+        transform: translate(-10px, -10px);
+    }
+}
+
+/* Calories Burned Animation */
+@keyframes move-calories-burned {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-10px, 10px);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    75% {
+        transform: translate(-10px, -10px);
+    }
+    100% {
+        transform: translate(10px, 10px);
+    }
 }
 
 #workouts {
@@ -292,12 +371,19 @@ main {
 
 #latest-blog-feed .section-header .badge {
     background: #ff4d4d;
-    padding: 5px 10px;
+    padding: 10px 15px;
     display: inline-block;
     color: #fff;
     margin-bottom: 10px;
     font-size: 16px;
-    border-radius: 3px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+#latest-blog-feed .section-header .badge:hover {
+    background: #ff1a1a; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 #latest-blog-feed .section-header h2 {
@@ -338,7 +424,14 @@ main {
     color: #fff;
     padding: 5px 10px;
     font-size: 14px;
-    border-radius: 3px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.blog-card .blog-date:hover {
+    background: #ff1a1a; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 .blog-card .blog-content {
