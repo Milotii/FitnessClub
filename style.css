@@ -60,9 +60,13 @@ header .logo {
 }
 
 header nav a {
-    color: #fff;
+    color: #fff;  
     margin: 0 10px;
     text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ff4d4d; /* Change this to the color you want on hover */
 }
 
 header nav a.active {
