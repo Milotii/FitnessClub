@@ -81,3 +81,35 @@ document.getElementById('blogs-link').addEventListener('click', function(event) 
 
     window.requestAnimationFrame(step);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const videoAudioPairs = [
+        { video: document.getElementById("video1"), audio: document.getElementById("audio1") },
+        { video: document.getElementById("video2"), audio: document.getElementById("audio2") },
+        { video: document.getElementById("video3"), audio: document.getElementById("audio3") },
+    ];
+
+    videoAudioPairs.forEach(pair => {
+        pair.video.addEventListener("play", function() {
+            pair.audio.play();
+        });
+
+        pair.video.addEventListener("pause", function() {
+            pair.audio.pause();
+        });
+
+        pair.video.addEventListener("seeking", function() {
+            pair.audio.currentTime = pair.video.currentTime;
+        });
+
+        pair.video.addEventListener("seeked", function() {
+            pair.audio.currentTime = pair.video.currentTime;
+        });
+
+        pair.video.addEventListener("timeupdate", function() {
+            if (Math.abs(pair.video.currentTime - pair.audio.currentTime) > 0.5) {
+                pair.audio.currentTime = pair.video.currentTime;
+            }
+        });
+    });
+});

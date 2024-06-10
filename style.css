@@ -23,6 +23,11 @@ body {
     font-weight: 700;
     color: #fff;
 }
+.logo span {
+    vertical-align: middle;
+    position: relative;
+    top: -22px; /* Adjust this value as needed */
+}
 
 .logo img {
     width: 80px; /* Adjust the width of the logo as needed */

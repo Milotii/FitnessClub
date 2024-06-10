@@ -8,7 +8,7 @@
 
    
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="chest-workout.css">
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
@@ -18,14 +18,16 @@
     
     <header>
         <div class="logo">
-            <img src="../images/file.png" alt="Fitness Club Logo">
-            Fitness Club
+            <a href="../index.html" style="text-decoration: none; color: inherit;">
+                <img src="../images/file.png" alt="Fitness Club Logo">
+                <span>Fitness Club</span>
+            </a>
         </div>
         <nav>
             <a href="file:///C:/Users/Lenovo/Desktop/fitness/index.html" class="active">Home</a>
             <a href="#workouts" id="workouts-link">Workouts</a>
             <a href="#blog" id="blogs-link">Blogs</a>
-            <a href="#about">About Us</a>
+            <a href="file:///C:/Users/Lenovo/Desktop/fitness/aboutUs/aboutUs.html">About Us</a>
             <a href="file:///C:/Users/Lenovo/Desktop/fitness/contactUs/contactUs.html">Contact Us</a>
         </nav>
         
@@ -34,25 +36,37 @@
     </header>
     
     <div class="container">
-        <h1>Chest Workout Videos</h1>
+        <h1>Back Workout Videos</h1>
         <div class="videos-container">
             <div class="video-wrapper">
-                <video controls>
+                <video id="video1" controls>
                     <source src="../videos/chest1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <audio id="audio1">
+                    <source src="../audio/gym-phonk-187854.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
             <div class="video-wrapper">
-                <video controls>
+                <video id="video2" controls>
                     <source src="../videos/chest2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <audio id="audio2">
+                    <source src="../audio/workout-metal-172773.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
             <div class="video-wrapper">
-                <video controls>
+                <video id="video3" controls>
                     <source src="../videos/chest3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <audio id="audio3">
+                    <source src="../audio/adrenaline-sport-rock-and-hip-hop-music-188808.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </div>
     </div>
